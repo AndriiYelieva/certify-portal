@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useDropzone } from 'react-dropzone';
 import * as pkijs from 'pkijs';
 import * as asn1js from 'asn1js';
 
@@ -15,27 +16,29 @@ export const AddCertificate: React.FC<Props> = ({ setIsAdd }) => {
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
+  const { getRootProps, getInputProps } = useDropzone({
+    onDrop: async (acceptedFiles: File[]) => {
+      const file = acceptedFiles[0];
+      if (!file) return;
 
-    try {
-      setIsLoading(true);
-      const fileContents = await readFileContents(file);
-      const parsedCertificate = parseCertificate(fileContents);
-      if (parsedCertificate !== null) {
-        setIsAdd(false)
-        addToLocalStorage("certificates", parsedCertificate)
-      } else {
-        throw new Error('Failed to parse the certificate');
+      try {
+        setIsLoading(true);
+        const fileContents = await readFileContents(file);
+        const parsedCertificate = parseCertificate(fileContents);
+        if (parsedCertificate !== null) {
+          setIsAdd(false)
+          addToLocalStorage("certificates", parsedCertificate)
+        } else {
+          throw new Error('Failed to parse the certificate');
+        }
+      } catch (error) {
+        setIsError(true)
+        console.error('Error reading file:', error);
+      } finally {
+        setIsLoading(false);
       }
-    } catch (error) {
-      setIsError(true)
-      console.error('Error reading file:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+    },
+  });
 
   const parseCertificate = (asn1Data: ArrayBuffer): CertificateInfo | null => {
     try {
@@ -91,18 +94,18 @@ export const AddCertificate: React.FC<Props> = ({ setIsAdd }) => {
 
       {isLoading === false && (
         <>
-          <h1>Перетягніть файл сертифікату сюди</h1>
-          <p>або</p>
-          <input
-            type="file"
-            onChange={handleFileChange}
-            className="get__input"
-          />
-          {isError && (
-            <h2 className="get__wrong">
-              Неправильна структура конверта сертифіката (очікується SEQUENCE)
-            </h2>
-          )}
+          <div {...getRootProps({ className: 'dropzone' })} className="get__zone">
+            <h1>Перетягніть файл сертифікату сюди</h1>
+            <p>або</p>
+            <input
+              {...getInputProps()}
+            />
+            {isError && (
+              <h2 className="get__wrong">
+                Неправильна структура конверта сертифіката (очікується SEQUENCE)
+              </h2>
+            )}
+          </div>
         </>
       )}
     </div>

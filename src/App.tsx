@@ -6,8 +6,6 @@ import "./App.scss";
 import { Certificates } from './components/Certificates/Certificates';
 import { AddCertificate } from './components/AddCertificate/AddCertificate';
 import { InfoCard } from './components/InfoCard/InfoCard';
-// import { Certificates, AddCertificate, InfoCard } from './components/index.js';
-// import { AddCertificate, Certificates, InfoCard } from './components';
 
 export default function App() {
   const [isAdd, setIsAdd] = useState(false);

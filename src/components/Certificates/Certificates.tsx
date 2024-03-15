@@ -11,7 +11,6 @@ type Props = {
 }
 
 export const Certificates: React.FC<Props> = ({ setIsAdd, isAdd }) => {
-
   const retrievedData = readFromLocalStorage('certificates');
 
   return (
@@ -22,7 +21,7 @@ export const Certificates: React.FC<Props> = ({ setIsAdd, isAdd }) => {
           className="certificates__button"
           onClick={() => setIsAdd(!isAdd)}
         >
-          {isAdd ? Button.Add : Button.Add}
+          {isAdd ? Button.Add : Button.Back}
         </button>
         {retrievedData && retrievedData.length > 0
           ? (<ul className="certificates__list">
