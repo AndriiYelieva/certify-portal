@@ -3,10 +3,10 @@ import { useDropzone } from 'react-dropzone';
 import * as pkijs from 'pkijs';
 import * as asn1js from 'asn1js';
 
-import { addToLocalStorage, formattedDate } from '../../helper';
+import { addToLocalStorage, formattedDate } from '../../Helper';
 import { CertificateInfo } from '../../Types';
 import "./AddCertificate.scss"
-import { Loader } from '../Loader/Loader';
+import { Loader } from '../Loader';
 
 type Props = {
   setIsAdd: (v: boolean) => void;
@@ -88,20 +88,23 @@ export const AddCertificate: React.FC<Props> = ({ setIsAdd }) => {
   };
 
   return (
-    <div className="get">
+    <div className="add">
 
       {isLoading && <Loader />}
 
       {isLoading === false && (
         <>
-          <div {...getRootProps({ className: 'dropzone' })} className="get__zone">
+          <div {...getRootProps({ className: 'dropzone' })}>
             <h1>Перетягніть файл сертифікату сюди</h1>
             <p>або</p>
+            <button className="add__button">
+              Виберіть через стандартний діалог
+            </button>
             <input
               {...getInputProps()}
             />
             {isError && (
-              <h2 className="get__wrong">
+              <h2 className="add__wrong">
                 Неправильна структура конверта сертифіката (очікується SEQUENCE)
               </h2>
             )}

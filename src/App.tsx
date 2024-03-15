@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import { HomePage, NotFound } from './Pages';
+import { NotFound } from './Pages';
 import "./App.scss";
-import { Certificates } from './components/Certificates/Certificates';
-import { AddCertificate } from './components/AddCertificate/AddCertificate';
-import { InfoCard } from './components/InfoCard/InfoCard';
+import { AddCertificate, Certificates, InfoCard } from './Components';
 
 export default function App() {
   const [isAdd, setIsAdd] = useState(false);
@@ -21,7 +19,6 @@ export default function App() {
 
         <Routes>
           <Route path="/" >
-            <Route index element={<HomePage />} />
             <Route path=":certificateId" element={<InfoCard />} />
           </Route>
 

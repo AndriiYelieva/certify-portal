@@ -1,4 +1,4 @@
-.get {
+.add {
   position: absolute;
   right: 0;
 
@@ -13,12 +13,9 @@
   
   text-align: center;
 
-  &__title {
-    font-size: 20px;
-  }
-
-  &__input {
-    margin: 0 auto;
+  &__button {
+    border-radius: 4px;
+    padding: 6px 8px; 
   }
 
   &__wrong {
