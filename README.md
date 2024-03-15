@@ -1,46 +1,30 @@
-# Getting Started with Create React App
+# Project "Page for adding and viewing certificates"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+This project is a web page developed using the React library. Its main goal is to allow adding and viewing certificates on the page, as well as saving them to the browser's local storage. The project uses a variety of technologies to work with data and the user interface.
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+- **React**: JavaScript library for creating user interfaces
+- **react-router-dom**: A routing library for React
+- **asn1js**: Library for working with ASN.1 (Abstract Syntax Notation One)
+- **pkijs**: Library for working with cryptography and standards X.509, PKCS (Public Key Cryptography Standards) and others
+- **date-fns**: Library for working with dates in JavaScript
+- **classnames**: A utility for dynamically setting classes in React
+- **react-dropzone**: A React component for selecting and dragging files
+- **Sass**: CSS preprocessor for styling
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Functionality
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Add certificates by selecting a file or dragging it to the page.
+- View the list of added certificates with basic data: name, publisher, expiration date.
+- Saving certificates to the browser's local storage for further use.
 
-### `npm test`
+## Instructions for Starting the Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone the repository to your computer.
+2. Open a terminal and navigate to the project folder.
+3. Run the `npm install` command to install the project dependencies.
+4. After successful installation, run the `npm start` command to start the project on the local server.
+5. Open your browser and go to [http://localhost:3000](http://localhost:3000) to view the page.
