@@ -1,0 +1,43 @@
+.main {
+  margin: 120px 140px;
+  // border: 1px solid #000;
+
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.certificates {
+  width: 300px;
+
+  &__button {
+    display: flex;
+    margin: 0 auto;
+    padding: 6px 30px;
+    border-radius: 4px;
+
+    cursor: pointer;
+  }
+
+  &__list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    color: #000;
+    text-align: left;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 1px solid #000;
+
+    text-decoration: none;
+  }
+
+  &__title {
+    margin-top: 40px;
+    text-align: center;
+  }
+}
+

@@ -1,0 +1,28 @@
+.get {
+  position: absolute;
+  right: 0;
+
+  height: 250px;
+  width: 450px;
+  padding: 20px;
+  border: 1px dashed #000;
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  text-align: center;
+
+  &__title {
+    font-size: 20px;
+  }
+
+  &__input {
+    margin: 0 auto;
+  }
+
+  &__wrong {
+    color: orangered;
+  }
+}

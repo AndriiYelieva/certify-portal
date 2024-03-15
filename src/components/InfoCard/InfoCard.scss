@@ -1,0 +1,11 @@
+.info {
+  height: 250px;
+  width: 450px;
+  
+  padding: 20px;
+  border: 1px solid #000;
+
+  &__title {
+    font-size: 20px;
+  }
+}

@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-function App() {
+import { HomePage, NotFound } from './Pages';
+import "./App.scss";
+import { Certificates } from './components/Certificates/Certificates';
+import { AddCertificate } from './components/AddCertificate/AddCertificate';
+import { InfoCard } from './components/InfoCard/InfoCard';
+// import { Certificates, AddCertificate, InfoCard } from './components/index.js';
+// import { AddCertificate, Certificates, InfoCard } from './components';
+
+export default function App() {
+  const [isAdd, setIsAdd] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <BrowserRouter>
+        <Certificates isAdd={isAdd} setIsAdd={setIsAdd} />
+
+        {isAdd && (
+          <AddCertificate setIsAdd={setIsAdd} />
+        )}
+
+        <Routes>
+          <Route path="/" >
+            <Route index element={<HomePage />} />
+            <Route path=":certificateId" element={<InfoCard />} />
+          </Route>
+
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </main >
   );
 }
-
-export default App;

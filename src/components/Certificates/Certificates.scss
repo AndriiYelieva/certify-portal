@@ -1,0 +1,44 @@
+.certificates {
+  width: 450px;
+
+  &__button {
+    display: flex;
+    margin: 0 auto;
+    padding: 6px 30px;
+    border-radius: 4px;
+
+    cursor: pointer;
+  }
+
+  &__list {
+    height: 400px;
+
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto
+  }
+
+  &__name {
+    text-align: left;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 1px solid #000;
+
+    text-decoration: none;
+
+    &--active {
+      color: #525252 !important;
+      background-color: #DDDDDD;
+      background-position: right;
+      background-repeat: no-repeat;
+      background-image: url("../../image/caret-right-fill.svg");
+    }
+  }
+
+  &__title {
+    margin-top: 40px;
+    text-align: center;
+  }
+}
