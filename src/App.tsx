@@ -18,7 +18,7 @@ export default function App() {
         )}
 
         <Routes>
-          <Route path="/" >
+          <Route path="/certify-portal" >
             <Route path=":certificateId" element={<InfoCard />} />
           </Route>
 

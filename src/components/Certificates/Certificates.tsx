@@ -26,7 +26,7 @@ export const Certificates: React.FC<Props> = ({ setIsAdd, isAdd }) => {
         ? (<ul className="certificates__list">
           {retrievedData.map(certificate => (
             <NavLink
-              to={`/${certificate.id}`}
+              to={`/certify-portal/${certificate.id}`}
               className={({ isActive }) =>
                 classNames(classNames("certificates__name", {
                   "certificates__name--active": isActive,

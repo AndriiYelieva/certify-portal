@@ -4,6 +4,10 @@
 
 This project is a web page developed using the React library. Its main goal is to allow adding and viewing certificates on the page, as well as saving them to the browser's local storage. The project uses a variety of technologies to work with data and the user interface.
 
+## Preview
+
+You can view the live demo site at this link:  ([My Bike] (https://andriiyelieva.github.io/certify-portal/)).
+
 ## Technologies Used
 
 - **React**: JavaScript library for creating user interfaces
