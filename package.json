@@ -1,18 +1,16 @@
 {
   "name": "certify-portal",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://github.com/AndriiYelieva/certify-portal",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
     "@types/node": "^16.18.89",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "asn1js": "^3.0.5",
     "classnames": "^2.5.1",
     "date-fns": "^3.5.0",
+    "gh-pages": "^6.1.1",
     "pkijs": "^3.0.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -24,6 +22,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
