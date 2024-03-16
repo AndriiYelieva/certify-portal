@@ -6,7 +6,7 @@ This project is a web page developed using the React library. Its main goal is t
 
 ## Preview
 
-You can view the live demo site at this link:  ([My Bike] (https://andriiyelieva.github.io/certify-portal/)).
+You can view the live demo site at this link:  ([Certify portal](https://andriiyelieva.github.io/certify-portal/)).
 
 ## Technologies Used
 
