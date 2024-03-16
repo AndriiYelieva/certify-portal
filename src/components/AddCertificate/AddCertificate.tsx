@@ -4,7 +4,7 @@ import * as pkijs from 'pkijs';
 import * as asn1js from 'asn1js';
 
 import { addToLocalStorage, formattedDate } from '../../Helper';
-import { CertificateInfo } from '../../Types';
+import { Certificate } from '../../Types';
 import "./AddCertificate.scss"
 import { Loader } from '../Loader';
 
@@ -40,7 +40,7 @@ export const AddCertificate: React.FC<Props> = ({ setIsAdd }) => {
     },
   });
 
-  const parseCertificate = (asn1Data: ArrayBuffer): CertificateInfo | null => {
+  const parseCertificate = (asn1Data: ArrayBuffer): Certificate | null => {
     try {
       const asn1 = asn1js.fromBER(asn1Data);
       const certificate = new pkijs.Certificate({ schema: asn1.result });

@@ -21,6 +21,7 @@
   }
 
   &__name {
+    color: #000;
     text-align: left;
     font-size: 20px;
     padding: 5px 10px;
@@ -33,7 +34,7 @@
       background-color: #DDDDDD;
       background-position: right;
       background-repeat: no-repeat;
-      background-image: url("../../Image/caret-right-fill.svg");
+      background-image: url("../../../public/Images/caret-right-fill.svg");
     }
   }
 

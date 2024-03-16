@@ -1,4 +1,4 @@
-export type CertificateInfo = {
+export type Certificate = {
   id: number;
   CommonName: string;
   IssuerCN: string;

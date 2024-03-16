@@ -1,2 +1,3 @@
 export * from './FormattedDate';
-export * from './LocalStorage';
+export { addToLocalStorage } from './LocalStorage';
+export { readFromLocalStorage } from './LocalStorage';

@@ -1,36 +1,22 @@
-import { CertificateInfo } from "../Types/CertificateInfo";
+import { Certificate } from "../Types/Certificate";
 
-// Додає дані до локального сховища
-export const addToLocalStorage = (key: string, data: CertificateInfo): void => {
+export const addToLocalStorage = (key: string, data: Certificate): void => {
   try {
-    // Отримуємо дані з локального сховища
     const existingDataString = localStorage.getItem(key);
-    const existingData: CertificateInfo[] = existingDataString ? JSON.parse(existingDataString) : [];
-
-    // Додаємо новий сертифікат до списку
+    const existingData: Certificate[] = existingDataString ? JSON.parse(existingDataString) : [];
     const updatedData = [...existingData, data];
 
-    // Зберігаємо оновлений список сертифікатів у локальному сховищі
     localStorage.setItem(key, JSON.stringify(updatedData));
-
-    console.log('Дані успішно додано до локального сховища.');
   } catch (error) {
-    console.error('Помилка при додаванні даних до локального сховища:', error);
+    console.error('Error adding data to local storage:', error);
   }
 };
 
-export const readFromLocalStorage = (key: string): CertificateInfo[] | undefined => {
+export const readFromLocalStorage = (key: string): Certificate[] | undefined => {
   try {
-    const data = localStorage.getItem(key); // Зчитуємо дані з локального сховища
-    return data ? JSON.parse(data) : null; // Парсимо дані та повертаємо їх, якщо вони є
+    const data = localStorage.getItem(key);
+    return data ? JSON.parse(data) : null;
   } catch (error) {
-    console.error('Помилка при зчитуванні даних з локального сховища:', error);
+    console.error('Error reading data from local storage:', error);
   }
 };
-
-// Приклад використання:
-// const data = { name: 'John', age: 30 };
-// addToLocalStorage('userData', data);
-
-// const retrievedData = readFromLocalStorage('userData');
-// console.log('Отримані дані:', retrievedData);
