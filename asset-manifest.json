@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/AndriiYelieva/certify-portal/static/css/main.2ca46207.css",
-    "main.js": "/AndriiYelieva/certify-portal/static/js/main.341757d5.js",
-    "static/js/453.9b52479f.chunk.js": "/AndriiYelieva/certify-portal/static/js/453.9b52479f.chunk.js",
-    "index.html": "/AndriiYelieva/certify-portal/index.html",
-    "static/media/caret-right-fill.svg": "/AndriiYelieva/certify-portal/static/media/caret-right-fill.e7eb6c4ec06a580c7ccd.svg",
-    "main.2ca46207.css.map": "/AndriiYelieva/certify-portal/static/css/main.2ca46207.css.map",
-    "main.341757d5.js.map": "/AndriiYelieva/certify-portal/static/js/main.341757d5.js.map",
-    "453.9b52479f.chunk.js.map": "/AndriiYelieva/certify-portal/static/js/453.9b52479f.chunk.js.map"
+    "main.css": "/certify-portal/static/css/main.32f3675f.css",
+    "main.js": "/certify-portal/static/js/main.d1474c1d.js",
+    "static/js/453.9b52479f.chunk.js": "/certify-portal/static/js/453.9b52479f.chunk.js",
+    "index.html": "/certify-portal/index.html",
+    "static/media/caret-right-fill.svg": "/certify-portal/static/media/caret-right-fill.e7eb6c4ec06a580c7ccd.svg",
+    "main.32f3675f.css.map": "/certify-portal/static/css/main.32f3675f.css.map",
+    "main.d1474c1d.js.map": "/certify-portal/static/js/main.d1474c1d.js.map",
+    "453.9b52479f.chunk.js.map": "/certify-portal/static/js/453.9b52479f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ca46207.css",
-    "static/js/main.341757d5.js"
+    "static/css/main.32f3675f.css",
+    "static/js/main.d1474c1d.js"
   ]
 }
