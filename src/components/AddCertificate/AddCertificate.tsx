@@ -3,10 +3,10 @@ import { useDropzone } from 'react-dropzone';
 import * as pkijs from 'pkijs';
 import * as asn1js from 'asn1js';
 
-import { addToLocalStorage, formattedDate } from '../../Helper';
-import { Certificate } from '../../Types';
-import "./AddCertificate.scss"
 import { Loader } from '../Loader';
+import { Certificate } from '../../Types';
+import { addToLocalStorage, formattedDate } from '../../Helper';
+import "./AddCertificate.scss"
 
 type Props = {
   setIsAdd: (v: boolean) => void;

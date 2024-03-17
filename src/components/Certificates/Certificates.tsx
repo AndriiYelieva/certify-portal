@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import classNames from "classnames";
 
 import { readFromLocalStorage } from "../../Helper";
-import { Button } from "../../Types/Button";
+import { Button } from "../../Types";
 import "./Certificates.scss"
 
 type Props = {
