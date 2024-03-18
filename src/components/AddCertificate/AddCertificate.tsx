@@ -5,7 +5,7 @@ import * as asn1js from 'asn1js';
 
 import { Loader } from '../Loader';
 import { Certificate } from '../../Types';
-import { addToLocalStorage, formattedDate } from '../../Helper';
+import { addToLocalStorage, formattedDate } from '../../Helpers';
 import "./AddCertificate.scss"
 
 type Props = {

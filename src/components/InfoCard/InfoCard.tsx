@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import "./InfoCard.scss"
-import { readFromLocalStorage } from "../../Helper";
+import { readFromLocalStorage } from "../../Helpers";
 
 export const InfoCard = () => {
   const { certificateId } = useParams();
